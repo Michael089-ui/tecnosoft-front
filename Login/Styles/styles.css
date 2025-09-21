@@ -1,0 +1,128 @@
+/* --- Estilos Generales --- */
+:root {
+    --color-fondo: #2E3A4D;
+    --color-contenedor: #4A5874;
+    --color-input: #D9D9D9;
+    --color-boton: #8FA5C0;
+    --color-logo: #A4B8D0;
+    --color-texto-claro: #E0E0E0;
+    --color-texto-oscuro: #333;
+    --color-barra: #1C2534;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Barra Superior (Header) --- */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-bar .icons span {
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* --- Contenedor Principal del Login --- */
+.login-container {
+    background-color: var(--color-contenedor);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Logo y Título --- */
+.logo {
+    width: 90px;
+    height: 90px;
+    background-color: var(--color-logo);
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+.login-container h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* --- Formulario --- */
+.login-form input {
+    width: 100%;
+    background-color: var(--color-input);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: var(--color-texto-oscuro);
+}
+
+.login-form input::placeholder {
+    color: #888;
+}
+
+.login-form .forgot-password {
+    display: block;
+    font-size: 0.9em;
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.login-form .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--color-boton);
+    color: var(--color-texto-oscuro);
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #7c92ac;
+}
+
+/* --- Barra Inferior (Footer) --- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-barra);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
