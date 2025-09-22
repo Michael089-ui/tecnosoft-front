@@ -1,0 +1,31 @@
+{
+  "name": "tecnosoft-front",
+  "version": "1.0.0",
+  "description": "Aplicación web para TecnoSoft Solutions que presenta catálogo de servicios, detalle de cada uno, login de administrador y panel CRUD. Proyecto académico desarrollado en equipo con HTML, CSS y JavaScript, siguiendo buenas prácticas de diseño y control de versiones en GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael089-ui/tecnosoft-front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael089-ui/tecnosoft-front/issues"
+  },
+  "homepage": "https://github.com/Michael089-ui/tecnosoft-front#readme",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.3",
+    "vite": "^7.1.6"
+  }
+}

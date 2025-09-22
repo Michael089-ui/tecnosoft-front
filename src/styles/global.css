@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; 
+    color: #FFFFFF; 
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilos generales */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Botones */
+  .btn {
+    background-color: #2E86DE; 
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #1C6BC1;
+    transform: translateY(-2px);
+  }
+  
+  /* Cards */
+  .card {
+    background: #2A343D;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header y footer */
+  .header, .footer {
+    background-color: #1A2228;
+    padding: 20px 0;
+    border-bottom: 1px solid #57606F;
+  }
+  
+  .footer {
+    border-top: 1px solid #57606F;
+    border-bottom: none;
+    margin-top: auto;
+  }
