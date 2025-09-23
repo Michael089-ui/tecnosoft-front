@@ -1,4 +1,4 @@
-/* --- Estilos Generales --- */
+
 :root {
     --color-fondo: #2E3A4D;
     --color-contenedor: #4A5874;
@@ -16,17 +16,21 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto-claro);
+}
+
+.app-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* --- Barra Superior (Header) --- */
+
 .top-bar {
     position: fixed;
     top: 0;
@@ -44,7 +48,7 @@ body {
     cursor: pointer;
 }
 
-/* --- Contenedor Principal del Login --- */
+/* Contenedor Principal del Login */
 .login-container {
     background-color: var(--color-contenedor);
     padding: 40px;
@@ -55,7 +59,7 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Logo y Título --- */
+/*  Logo y Título  */
 .logo {
     width: 90px;
     height: 90px;
@@ -70,7 +74,7 @@ body {
     font-weight: 600;
 }
 
-/* --- Formulario --- */
+/*  Formulario  */
 .login-form input {
     width: 100%;
     background-color: var(--color-input);
@@ -115,7 +119,7 @@ body {
     background-color: #7c92ac;
 }
 
-/* --- Barra Inferior (Footer) --- */
+/*  (Footer) */
 footer {
     position: fixed;
     bottom: 0;
