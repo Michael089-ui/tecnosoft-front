@@ -11,16 +11,36 @@ const Footer = () => {
         <a href="#">Términos</a>
       </div>
       <div className="social-icons">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="facebook"
+        >
           <img src={facebook} alt="Facebook" />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="instagram"
+        >
           <img src={instagram} alt="Instagram" />
         </a>
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://x.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="x"
+        >
           <img src={x} alt="X" />
         </a>
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="youtube"
+        >
           <img src={youtube} alt="YouTube" />
         </a>
       </div>
