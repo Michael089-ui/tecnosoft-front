@@ -4,7 +4,7 @@ const Header = () => {
         <div className="logo">TECNOSOFT</div>
         <nav className="nav">
           <a href="#">Home</a>
-          <a href="#">Servicios</a>
+          <a href="http://localhost:3000/">Servicios</a>
           <a href="#">Login</a>
           <a href="#">Contacto</a>
         </nav>
