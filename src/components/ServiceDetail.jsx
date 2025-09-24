@@ -1,11 +1,19 @@
-import { useState } from "react";
-import products from "../data/products"; 
+import { useEffect, useState } from "react";
+import products from "../data/products";
 
 const ServiceDetail = () => {
-  
-  const defaultService = products.find((p) => p.id === 1);
+  const [service, setService] = useState(null);
+  const [defaultService, setDefaultService] = useState(null);
 
-  const [service, setService] = useState(defaultService);
+  useEffect(() => {
+    // Tomar el ID de la querystring (?id=2)
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id")) || 1;
+
+    const foundService = products.find((p) => p.id === id) || products[0];
+    setService(foundService);
+    setDefaultService(foundService);
+  }, []);
 
   const formatPrice = (value) =>
     new Intl.NumberFormat("es-CO", {
@@ -14,13 +22,19 @@ const ServiceDetail = () => {
     }).format(value);
 
   const togglePromo = () => {
+    if (!service || !defaultService) return;
+
     const newPromo = !service.promo;
     setService({
       ...service,
       promo: newPromo,
-      price: newPromo ? +(defaultService.price * 0.85).toFixed(2) : defaultService.price,
+      price: newPromo
+        ? +(defaultService.price * 0.85).toFixed(2)
+        : defaultService.price,
     });
   };
+
+  if (!service) return <p>Cargando detalle...</p>;
 
   return (
     <main className="main-content">
@@ -28,8 +42,8 @@ const ServiceDetail = () => {
         {/* LEFT */}
         <section className="left">
           <img
-            src="servicios.png"
-            alt="Imagen del servicio"
+            src={service.image}
+            alt={service.name}
             className="service-img"
           />
           <button className="btn">{service.name}</button>
