@@ -1,23 +1,37 @@
 {
-  "name": "detalle-servicio",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tecnosoft-front",
+  "version": "1.0.0",
+  "description": "Aplicación web para TecnoSoft Solutions que presenta catálogo de servicios, detalle de cada uno, login de administrador y panel CRUD. Proyecto académico desarrollado en equipo con HTML, CSS y JavaScript, siguiendo buenas prácticas de diseño y control de versiones en GitHub.",
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael089-ui/tecnosoft-front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael089-ui/tecnosoft-front/issues"
+  },
+  "homepage": "https://github.com/Michael089-ui/tecnosoft-front#readme",
   "dependencies": {
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.2",
+    "@vitejs/plugin-react": "^5.0.3",
     "eslint": "^9.35.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
