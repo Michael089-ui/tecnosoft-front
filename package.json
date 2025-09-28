@@ -2,12 +2,14 @@
   "name": "tecnosoft-front",
   "version": "1.0.0",
   "description": "Aplicación web para TecnoSoft Solutions que presenta catálogo de servicios, detalle de cada uno, login de administrador y panel CRUD. Proyecto académico desarrollado en equipo con HTML, CSS y JavaScript, siguiendo buenas prácticas de diseño y control de versiones en GitHub.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,14 @@
     "react-router-dom": "^7.9.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
+    "eslint": "^9.35.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.4.0",
     "vite": "^7.1.6"
   }
 }
