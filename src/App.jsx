@@ -1,9 +1,16 @@
-import React from 'react';
-import ProductsPage from './pages/ProductsPage';
-import './styles/global.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ServiceDetail from "./components/ServiceDetail";
+import "./App.css";
 
 function App() {
-  return <ProductsPage />;
+  return (
+    <div className="app">
+      <Header />
+      <ServiceDetail />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
