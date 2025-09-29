@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ServiceDetail from "./components/ServiceDetail";
 import ProductsPage from "./pages/ProductsPage";
+import MockupTecnoSoft from "./components/MockupTecnoSoft"; 
 import "./styles/global.css";
 import "./App.css";
 
@@ -12,7 +13,13 @@ function App() {
       <div className="app">
         <Header />
         <Routes>
-          <Route path="/" element={<ProductsPage />} />
+          {/* Mockup 1*/}
+          <Route path="/" element={<MockupTecnoSoft />} />
+
+          {/* Productos */}
+          <Route path="/productos" element={<ProductsPage />} />
+
+          {/* Detalle de servicios */}
           <Route path="/servicio/:id" element={<ServiceDetail />} />
         </Routes>
         <Footer />
@@ -22,3 +29,4 @@ function App() {
 }
 
 export default App;
+
