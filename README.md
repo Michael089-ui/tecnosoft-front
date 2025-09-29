@@ -1,4 +1,3 @@
-````markdown
 # 🚀 TecnoSoft: Plataforma E-commerce y Servicios Tecnológicos
 
 [![React Badge](https://img.shields.io/badge/Tecnología-React%20JS-blue)](https://reactjs.org/)
@@ -30,61 +29,52 @@ Para levantar el proyecto en tu entorno local.
 ### Instalación y Ejecución
 
 1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://www.youtube.com/watch?v=eQMcIGVc8N0](https://www.youtube.com/watch?v=eQMcIGVc8N0)
+```bash
+    git clone https://github.com/tu-usuario/tecnosoft-front.git
     cd tecnosoft-front
-    ```
 
 2.  **Instalar dependencias:**
-    ```bash
+```bash
     npm install
     # o yarn install
-    ```
 
-3.  **Iniciar el servidor de desarrollo:**
-    ```bash
-    npm run dev
+3. **Iniciar el servidor de desarrollo:**
+npm run dev
     # El frontend se ejecutará en http://localhost:3000
-    ```
 
----
+--------------------------------------------------------------------------------
+💻 Características Principales y Estructura
+Vista de Productos Terminada
+La sección clave del proyecto es la vista de catálogo (ProductsPage).
 
-## 💻 Características Principales y Estructura
-
-### Vista de Productos Terminada
-
-La sección clave del proyecto es la vista de catálogo (`ProductsPage`).
-
-* **Implementación:** Componente `ProductsPage.jsx` con un diseño de *grid* adaptable (utilizando `ProductsPage.css`).
-* **Carga de Imágenes:** Los *assets* (10 imágenes de productos) se gestionan localmente en `src/assets/` y se cargan mediante importaciones de módulos en `src/data/products.js`.
-* **Componente Base:** Uso del componente `ProductCard.jsx` para la visualización individual de cada artículo.
-
-### Estructura de Archivos
-
-````
+Implementación: Componente ProductsPage.jsx con un diseño de grid adaptable (utilizando ProductsPage.css).
+Carga de Imágenes: Los assets (10 imágenes de productos) se gestionan localmente en src/assets/ y se cargan mediante importaciones de módulos en src/data/products.js.
+Componente Base: Uso del componente ProductCard.jsx para la visualización individual de cada artículo.
 
 src/
-├── assets/         \# 10 imágenes de productos (laptops, monitores, impresoras, etc.)
-├── components/     \# Elementos de UI reutilizables (ProductCard, Navbar, Footer, Layout)
-├── data/           \# Datos estáticos (Mock data)
-│   └── products.js \# Arreglo de productos y las importaciones de assets
-├── pages/          \# Vistas principales (ProductsPage, LoginPage, AdminDashboardPage)
-└── styles/         \# Archivos CSS (ProductsPage.css, ProductCard.css, etc.)
+├── assets/         # 10 imágenes de productos (laptops, monitores, impresoras, etc.)
+├── components/     # Elementos de UI reutilizables (ProductCard, Navbar, Footer, Layout)
+├── data/           # Datos estáticos (Mock data)
+│   └── products.js # Arreglo de productos y las importaciones de assets
+├── pages/          # Vistas principales (ProductsPage, LoginPage, AdminDashboardPage)
+└── styles/         # Archivos CSS (ProductsPage.css, ProductCard.css, etc.)
 
-```
 
----
+⚙️ Notas de Configuración (Para Desarrolladores)
 
-## ⚙️ Notas de Configuración (Para Desarrolladores)
+Durante la implementación, se realizaron ajustes cruciales para la resolución de assets en el bundler (Vite):
 
-Durante la implementación, se realizaron ajustes cruciales para la resolución de *assets* en el *bundler* (Vite):
+Importación por Defecto: Se estandarizó la importación de la mock data en ProductsPage.jsx a import products from '../data/products'; para coincidir con la convención export default en products.js.
+Nombres de Assets: Se corrigieron los errores de compilación (Failed to resolve import...) al asegurar que todas las importaciones de imagen en products.js coincidieran exactamente con los nombres de archivo en disco, eliminando dobles extensiones (.jpg.jpg) y estandarizando mayúsculas/minúsculas.
 
-1.  **Importación por Defecto:** Se estandarizó la importación de la *mock data* en `ProductsPage.jsx` a **`import products from '../data/products';`** para coincidir con la convención `export default` en `products.js`.
-2.  **Nombres de Assets:** Se corrigieron los errores de compilación (`Failed to resolve import...`) al asegurar que todas las importaciones de imagen en `products.js` coincidieran **exactamente** con los nombres de archivo en disco, eliminando dobles extensiones (`.jpg.jpg`) y estandarizando mayúsculas/minúsculas.
+🤝 Contribuciones
+Si deseas mejorar o extender esta plataforma, eres bienvenido a enviar un Pull Request.
 
----
+**Cambios realizados:**
 
-## 🤝 Contribuciones
+1. ✅ Eliminé las comillas invertidas innecesarias al inicio y final
+2. ✅ Corregí el enlace del git clone (tenías un link de YouTube, lo cambié por un placeholder para tu repositorio)
+3. ✅ Corregí los caracteres de escape (`\#`) en la estructura de archivos
+4. ✅ Ajusté el formato del bloque de código de la estructura de archivos
 
-Si deseas mejorar o extender esta plataforma, eres bienvenido a enviar un *Pull Request*.
-```
+ 
