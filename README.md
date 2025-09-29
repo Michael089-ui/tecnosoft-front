@@ -1,92 +1,49 @@
-💻 Proyecto TecnoSoft - Frontend
-Este proyecto constituye la interfaz de usuario (Frontend) de la aplicación TecnoSoft, desarrollado usando React y Vite.
 
-🚀 Inicio Rápido
-Prerrequisitos
-Asegúrate de tener instalado Node.js (versión LTS recomendada) y npm (o yarn) en tu sistema.
+TecnoSoft 
 
-Instalación
-Clona este repositorio o descarga los archivos.
+Project Title	TecnoSoft - Frontend (React/Vite)
+Este proyecto constituye la interfaz de usuario (Frontend) de la aplicación TecnoSoft. Finaliza la implementación de la vista ProductsPage e integra todos los assets de producto de forma local.
 
-Navega a la carpeta raíz del proyecto (/tecnosoft-front).
 
-Instala las dependencias:
+2. Getting Started (Inicio Rápido)
 
-Bash
+Prerequisites	Asegúrate de tener instalado Node.js (versión LTS recomendada) y npm (o yarn) en tu sistema.
 
-npm install
-# o si usas yarn
-yarn install
-Ejecución
-Para iniciar el servidor de desarrollo (Vite) en localhost:3000:
+Installation	
 
-Bash
+1. Clona el repositorio.
+2. Navega a la carpeta raíz. 
+3. Ejecuta 
 
-npm run dev
-# o
-yarn dev
-📂 Estructura del Proyecto
-La estructura del proyecto sigue una convención clara, organizando los archivos por su función:
+npm install (o yarn install).
+Run Locally	Para iniciar el servidor de desarrollo (Vite) en 
+localhost:3000: npm run dev (o yarn dev).
+
+Export to Sheets
+3. Features (Funcionalidades)	
+
+* Vista de Productos Terminada: Implementación completa de la vista ProductsPage con diseño de grid adaptable.
+* Gestión de Assets Locales: Se integraron los 10 assets de imagen de producto usando la carpeta src/assets/.
+* Estructura Modular: Organización clara de archivos usando convenciones de React (Components, Pages, Data, Styles).
+
+4. Technical Details & Fixes (Detalles Técnicos y Correcciones)
+Usa esta sección para documentar las soluciones a los problemas de configuración más críticos.
+
+* Rutas de Imágenes: Se corrigió el error de "Failed to resolve import" estandarizando los nombres de archivo (src/assets/) a minúsculas y usando guiones bajos (_) para la compatibilidad con el bundler (Vite).
+* Corrección de Importación: La importación de datos en ProductsPage.jsx se corrigió a import products from '../data/products'; para coincidir con la exportación por defecto de products.js.
+* Archivo de Datos (products.js): Implementación del patrón de importación de módulos de JS para cargar las imágenes de forma dinámica, usando la variable imageSrc en cada objeto.
+
+5. Project Structure (Estructura del Proyecto)
+En esta sección, puedes copiar y pegar el bloque de código de la estructura para que se vea claro.
+
+
 
 src/
 ├── assets/         # Recursos estáticos (Imágenes de productos, logos, etc.)
-│   ├── laptop.jpg
-│   ├── teclado_mecanico.jpg
-│   └── ... (Tus 10 imágenes corregidas)
+│   └── ... (Imágenes de productos)
 ├── components/     # Componentes reutilizables (ProductCard, Layout, Navbar, etc.)
-│   ├── ProductCard.jsx
-│   └── Layout.jsx
 ├── data/           # Datos estáticos (Mock data)
 │   └── products.js # LISTA DE PRODUCTOS Y RUTAS DE IMAGEN
-├── pages/          # Vistas principales (ProductsPage, LoginPage, AdminDashboardPage)
+├── pages/          # Vistas principales (ProductsPage, LoginPage, etc.)
 │   └── ProductsPage.jsx
 └── styles/         # Archivos CSS globales y de componentes
-    ├── ProductsPage.css
-    └── ProductCard.css
-🌟 Configuraciones y Cambios Importantes
-Durante el desarrollo, se realizaron ajustes críticos para asegurar el correcto funcionamiento de la vista de productos (ProductsPage.jsx) y la carga de imágenes locales:
-
-1. Gestión de Imágenes de Productos
-Las imágenes de los 10 productos fueron movidas a la carpeta src/assets/ para una gestión centralizada de recursos estáticos.
-
-Archivo Modificado: src/data/products.js
-
-Implementación: Se utiliza el patrón de importación de módulos de JavaScript para cargar las imágenes, evitando rutas relativas estáticas:
-
-JavaScript
-
-import laptopImg from '../assets/laptop.jpg'; 
-// ...
-const mockProducts = [
-    { id: 1, name: '...', imageSrc: laptopImg, ... }
-];
-export default mockProducts;
-Corrección de Rutas: Se implementó una convención estricta de minúsculas y guiones bajos en los nombres de archivo (teclado_mecanico.jpg) para evitar errores de compilación ([plugin:vite:import-analysis] Failed to resolve import...).
-
-2. Vista de Productos (ProductsPage.jsx)
-Se corrigió la manera en que se acceden a los datos de los productos para resolver los errores de importación.
-
-Archivo Modificado: src/pages/ProductsPage.jsx
-
-Corrección de Importación: Se cambió la importación nombrada a una importación por defecto, alineándose con el export default de products.js:
-
-Antes (Error)	Después (Correcto)
-import { products } from '../data/products';	import products from '../data/products';
-
-Export to Sheets
-3. Componente ProductCard.jsx
-Este componente utiliza la propiedad imageSrc del objeto producto para mostrar la imagen:
-
-JavaScript
-
-<img src={product.imageSrc} alt={product.name} className="product-card__image" />
-Asegúrate de que este componente también importe su CSS (import './ProductCard.css';) para aplicar los estilos visuales de la tarjeta (fondo, colores, etc.).
-
-
-
-puedes exportarlo para importarlo directamente a git hub?
-
-
-No puedo interactuar directamente con tu sistema de archivos ni exportar proyectos directamente a GitHub, ya que soy un modelo de lenguaje y no tengo acceso a tu entorno local o a tus cuentas externas.
-
-Sin embargo, puedo darte los pasos exactos que debes seguir en tu terminal para crear un repositorio en GitHub e importar todo tu proyecto, incluyendo todos los cambios que realizamos.
