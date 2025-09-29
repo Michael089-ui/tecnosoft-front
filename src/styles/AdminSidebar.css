@@ -1,0 +1,60 @@
+/* src/styles/AdminSidebar.css */
+
+.admin-sidebar {
+    background-color: #2c3e50; 
+    color: white;
+    /* FIJAR LA ANCHURA DEL SIDEBAR */
+    width: 250px; 
+    min-width: 250px; /* Asegura que no se encoge */
+    height: 100vh; /* Usa 100vh para llenar la pantalla */
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.admin-sidebar__profile {
+    /* Centrado y padding */
+    text-align: left; /* Deja de centrar el texto aquí */
+    padding: 0 20px 20px 20px; /* Añade padding a los lados */
+    border-bottom: 1px solid #34495e;
+}
+
+/* IMPORTANTE: Ajustar el padding de los enlaces */
+.admin-sidebar__nav-item {
+    display: block;
+    padding: 10px 20px; /* Padding uniforme */
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    position: relative;
+    padding-left: 35px; /* Espacio para el bullet */
+    transition: background-color 0.3s;
+}
+
+.admin-sidebar__nav-item::before {
+    /* El bullet debe estar fijo a la izquierda */
+    position: absolute;
+    left: 15px;
+    /* ... otros estilos de bullet ... */
+}
+
+/* src/styles/AdminSidebar.css */
+
+.admin-sidebar {
+    /* ... otros estilos ... */
+    width: 250px; /* Asegura el ancho */
+    min-width: 250px; 
+    height: 100vh;
+    padding: 20px 0;
+}
+
+.admin-sidebar__nav-item {
+    /* Asegura el padding izquierdo para el texto y el bullet */
+    padding: 10px 20px; 
+    padding-left: 35px; 
+    /* ... */
+}
+/* ... y el padding del .admin-sidebar__profile debe ser: */
+.admin-sidebar__profile {
+    padding: 0 20px 20px 20px;
+    text-align: left; /* Desactiva el centrado si lo tenías */
+}

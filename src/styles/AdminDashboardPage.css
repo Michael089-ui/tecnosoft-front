@@ -1,0 +1,184 @@
+/* src/styles/AdminDashboardPage.css */
+
+/* --- 1. CLASE CRUCIAL PARA LA DISPOSICIÓN FLEX --- */
+.page-admindashboard__layout {
+    display: flex; 
+    min-height: 100vh; 
+    background-color: #f4f4f4; /* Fondo del área de contenido */
+}
+
+/* --- 2. CONTENIDO PRINCIPAL (El área que NO es el sidebar) --- */
+.page-admindashboard__content {
+    flex-grow: 1; /* Ocupa el resto del espacio */
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto; 
+}
+
+/* --- 3. CONTENIDO CENTRAL (Donde están las métricas y la tabla) --- */
+.page-admindashboard__main-view {
+    flex-grow: 1; 
+    /* ¡Añadir padding aquí para que no se pegue al sidebar ni a la derecha! */
+    padding: 20px; 
+}
+
+
+/* --- 4. ARREGLAR ESTILOS SOSOS DE LA TABLA (CRUD) --- */
+
+.page-admindashboard__crud-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Separación de las cards */
+}
+
+/* Arreglar el botón de Menú (está en una línea separada y desalineado) */
+.page-admindashboard__menu-bar {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.page-admindashboard__menu-button {
+    /* Botón azul del mockup */
+    background-color: #4a86e8; 
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.page-admindashboard__crud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilos de tabla para que se vea bien (ya provistos, pero verificar) */
+.page-admindashboard__table {
+    /* ... */
+}
+.page-admindashboard__table-header-row {
+    background-color: #343a40; 
+    color: white;
+}
+/* ... etc. */
+
+/* src/styles/AdminDashboardPage.css */
+
+.page-admindashboard__main-view {
+    flex-grow: 1; 
+    /* ¡Añadir padding aquí para que el contenido no se pegue al sidebar ni a los bordes! */
+    padding: 20px; 
+}
+
+
+/* src/styles/AdminDashboardPage.css */
+
+/* Contenedor que da el fondo blanco y sombra */
+.page-admindashboard__crud-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* LA TABLA EN SÍ */
+.page-admindashboard__table {
+    width: 100%;
+    border-collapse: collapse; /* Crucial para eliminar el espacio entre celdas */
+    margin-top: 15px; /* Espacio debajo del título y botones */
+}
+
+/* Cabecera de la tabla (Gris Oscuro) */
+.page-admindashboard__table-header-row {
+    background-color: #343a40; /* Fondo gris oscuro */
+    color: white;
+}
+
+.page-admindashboard__table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.page-admindashboard__table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #dee2e6; /* Separador de filas */
+}
+
+/* Si tu tabla tiene la clase `page-admindashboard__table-container` */
+.page-admindashboard__table-container {
+    overflow-x: auto; /* Para tablas grandes en móviles */
+}
+
+/* src/styles/AdminDashboardPage.css */
+
+/* Celda que contiene los botones */
+.page-admindashboard__actions-cell {
+    /* Si tienes más elementos, usa flex para alinearlos */
+    display: flex; 
+    gap: 5px; /* Pequeña separación entre botones */
+    align-items: center;
+}
+
+/* Estilo base para todos los enlaces/botones de acción */
+.page-admindashboard__action-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: center;
+}
+
+.page-admindashboard__action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* src/styles/AdminDashboardPage.css */
+
+.page-admindashboard__top-bar {
+    background-color: #007bff; /* Color azul del header superior */
+    color: white;
+    /* Antes: padding: 15px 20px; (Sólo padding) */
+    
+    /* 1. Añadimos flex para centrar el contenido (si hay más elementos) */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    
+    /* 2. Aumentamos el padding para darle aire */
+    padding: 15px 30px; 
+    
+    /* 3. Sombra inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.page-admindashboard__top-bar h2 {
+    margin: 0; /* Quita cualquier margen predeterminado del <h2> */
+    font-size: 1.5em; /* Tamaño visible */
+    font-weight: 700; /* Negrita */
+    flex-grow: 1; /* Permite que el <h2> tome el espacio si hay otros elementos */
+    
+    /* Si solo quieres centrar el texto: */
+    text-align: center; 
+    /* Si quieres alinearlo a la izquierda con el contenido del sidebar:
+       text-align: left; 
+       margin-left: 20px; <--- Podrías usar esto si el padding general es 20px */
+}
+
+/* Opcional: Si quieres centrarlo en el medio de la vista: */
+/*
+.page-admindashboard__top-bar h2 {
+    text-align: center;
+}
+*/

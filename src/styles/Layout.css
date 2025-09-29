@@ -1,0 +1,44 @@
+/* src/styles/Layout.css */
+
+/* 1. Contenedor principal: Asegura que ocupe toda la altura de la pantalla */
+.layout {
+    display: flex;
+    flex-direction: column; /* Apila Header, Main y Footer verticalmente */
+    min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+    background-color: #f4f4f4; /* Fondo general ligero (opcional) */
+}
+
+/* 2. Contenido dinámico: Permite que el contenido principal crezca */
+.layout main {
+    flex-grow: 1; /* Esto es CLAVE: hace que el 'main' tome todo el espacio disponible */
+    padding-top: 20px; /* Margen superior para separar del Navbar */
+}
+
+/* 3. Estilo del Footer (fondo oscuro del mockup) */
+.footer {
+    background-color: #343a40; /* Fondo gris oscuro/negro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Otra forma de asegurar que se pegue al fondo */
+    
+    /* Si el footer tiene contenido complejo (ej: links y redes sociales) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #4a4a4a;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* --- ESTILOS DE PRODUCTOS DENTRO DEL MAIN (Recuerda aplicar esto en ProductsPage.css) --- */
+/* Esta sección es crucial para que el contenido de ProductosPage se vea centrado. */
+/* Si no lo has hecho, agrégalo a ProductsPage.css: */
+.products-page__container {
+    max-width: 1200px; /* Ancho máximo estándar para contenido web */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 0 20px 40px 20px; /* Padding a los lados y abajo */
+}

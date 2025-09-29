@@ -1,32 +1,77 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ServiceDetail from "./components/ServiceDetail";
+import Layout from "./components/Layout";
+
+// Páginas públicas
 import ProductsPage from "./pages/ProductsPage";
-import MockupTecnoSoft from "./components/MockupTecnoSoft"; 
-import "./styles/global.css";
-import "./App.css";
+import HomePage from "./pages/HomePage";
+import ListadoServiciosPage from "./pages/ListadoServiciosPage";
+import DetalleServicioPage from "./pages/DetalleServicioPage";
+import LoginPage from "./pages/LoginPage";
+
+// Admin
+import AdminLayout from "./pages/AdminLayout";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
+import AdminUsuariosPage from "./pages/AdminUsuariosPage";
+import AdminConfigPage from "./pages/AdminConfigPage";
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Header />
-        <Routes>
-          {/* Mockup 1*/}
-          <Route path="/" element={<MockupTecnoSoft />} />
+      <Routes>
+        {/* 🌐 Rutas públicas con layout */}
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <HomePage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/productos"
+          element={
+            <Layout>
+              <ProductsPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/servicios"
+          element={
+            <Layout>
+              <ListadoServiciosPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/detalle-servicio/:id"
+          element={
+            <Layout>
+              <DetalleServicioPage />
+            </Layout>
+          }
+        />
 
-          {/* Productos */}
-          <Route path="/productos" element={<ProductsPage />} />
+        {/* 🔐 Login (CORREGIDO: Ahora usa el Layout) */}
+        <Route 
+          path="/login" 
+          element={
+            <Layout>
+              <LoginPage /> 
+            </Layout>
+          } 
+        />
 
-          {/* Detalle de servicios */}
-          <Route path="/servicio/:id" element={<ServiceDetail />} />
-        </Routes>
-        <Footer />
-      </div>
+        {/* ⚙️ Admin con rutas anidadas */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboardPage />} />
+          <Route path="servicios" element={<ListadoServiciosPage />} />
+          <Route path="usuarios" element={<AdminUsuariosPage />} />
+          <Route path="configuracion" element={<AdminConfigPage />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }
 
 export default App;
-

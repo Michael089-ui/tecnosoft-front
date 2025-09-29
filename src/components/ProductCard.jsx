@@ -1,36 +1,33 @@
-const ProductCard = ({ product }) => {
-  const handleClick = () => {
-    // Redirige al proyecto del detalle con el ID en querystring
-    window.location.href = `http://localhost:5173/?id=${product.id}`;
-  };
+// src/components/ProductCard.jsx
 
-  return (
-    <div
-      style={{
-        background: '#2A343D',
-        border: '1px solid #57606F',
-        borderRadius: '8px',
-        padding: '15px',
-        textAlign: 'center',
-        cursor: 'pointer',
-      }}
-      onClick={handleClick}
-    >
-      <img
-        src={product.image}
-        alt={product.name}
-        style={{
-          width: '100%',
-          height: '180px',
-          objectFit: 'cover',
-          borderRadius: '6px',
-          marginBottom: '15px',
-        }}
-      />
-      <h3 style={{ color: '#FFFFFF' }}>{product.name}</h3>
-      <p style={{ color: '#2E86DE', fontWeight: 'bold' }}>${product.price}</p>
-    </div>
-  );
-};
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/ProductCard.css';
 
-export default ProductCard;
+export default function ProductCard({ product, isDarkDesign = false }) {
+    const cardClass = `product-card ${isDarkDesign ? 'product-card--dark' : ''}`;
+
+    // ✅ CORRECCIÓN: Usar la imagen real del producto en lugar del placeholder
+    const imageUrl = product.imageSrc || `https://via.placeholder.com/200x150?text=${product.name.replace(/ /g, '+')}`;
+
+    return (
+        <Link to={`/productos/${product.id}`} className={cardClass}>
+            <div className="product-card__image-container">
+                <img 
+                    src={imageUrl} 
+                    alt={product.name} 
+                    className="product-card__image"
+                    onError={(e) => {
+                        // Fallback al placeholder si la imagen falla
+                        console.error(`Error cargando imagen para: ${product.name}`);
+                        e.target.src = `https://via.placeholder.com/200x150?text=${product.name.replace(/ /g, '+')}`;
+                    }}
+                /> 
+            </div>
+            <div className="product-card__details">
+                <h3 className="product-card__name">{product.name}</h3>
+                <p className="product-card__price">${product.price}</p>
+            </div>
+        </Link>
+    );
+}

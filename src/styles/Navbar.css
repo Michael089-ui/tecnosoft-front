@@ -1,0 +1,51 @@
+/* src/styles/Navbar.css (Pulido Final) */
+
+/* 1. Contenedor de la barra de navegación (FONDO NEGRO) */
+.navbar {
+  /* ¡Importante! Este es el fondo de la barra de enlaces */
+  background-color: #1a202c; 
+  /* Usamos Flexbox para el control total */
+  display: flex; 
+  /* Ajusta el padding para que no se vea el fondo blanco/gris del cuerpo */
+  padding: 10px 40px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Pequeña sombra */
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Separación entre enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  /* Espacio para que el área clickeable sea más grande */
+  padding: 5px 0; 
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #63b3ed; /* Azul claro en hover */
+}
+
+/* --------------------------------------------------- */
+/* CÓMO ELIMINAR LA BARRA AZUL (LA MÁS PROBABLE) */
+/* --------------------------------------------------- */
+/* Si la barra AZUL sigue apareciendo, es probable que la clase .layout tenga un fondo azul 
+   que está apareciendo por encima o debajo del navbar.
+
+   Revisa el archivo src/styles/Layout.css y ASEGÚRATE de que el body o el .layout 
+   no tiene un fondo azul en la zona superior. */
+
+/* Ejemplo: Revisa y elimina esto si lo ves en Layout.css o global.css: */
+/*
+body, .layout {
+    background-color: blue; 
+    padding-top: 50px; // <-- Esto dejaría una franja azul visible
+}
+*/

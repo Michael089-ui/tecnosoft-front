@@ -1,0 +1,145 @@
+/* src/styles/AdminUsuariosPage.css */
+
+.admin-usuarios-page {
+    /* Fondo blanco y sombra, como las otras vistas admin */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Margen superior para separarse de la barra azul "Technosoft" 
+       (aunque ya lo debería dar AdminLayout, a veces es necesario aquí) */
+    margin-top: 0; 
+}
+
+/* Asegura el estilo del ícono y el título */
+.admin-usuarios-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.admin-usuarios-icon {
+    font-size: 2em;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+/* Lista de Usuarios (Para que los datos se vean limpios) */
+.admin-usuarios-list {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-usuarios-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s;
+}
+
+.admin-usuarios-list-item:hover {
+    background-color: #f7f7f7;
+}
+
+
+/* src/styles/AdminUsuariosPage.css */
+
+/* --- 1. Alineación de la Fila (IMPORTANTE) --- */
+.admin-usuarios-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s;
+}
+.admin-usuarios-list-item:hover {
+    background-color: #f7f7f7;
+}
+
+/* --- 2. Contenedor de Acciones (para separar botones) --- */
+.admin-usuarios-actions {
+    display: flex;
+    gap: 5px; /* Pequeña separación entre los botones */
+    width: 150px; /* Dar un ancho fijo para que la columna no varíe */
+    justify-content: flex-end; /* Alinea los botones a la derecha de su columna */
+}
+
+/* --- 3. Estilo Base para los Botones --- */
+.admin-usuarios-btn-edit,
+.admin-usuarios-btn-delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* --- 4. Colores Específicos --- */
+.admin-usuarios-btn-edit {
+    background-color: #ffc107; /* Amarillo para Editar */
+    color: #333;
+}
+
+.admin-usuarios-btn-delete {
+    background-color: #dc3545; /* Rojo para Eliminar */
+    color: white;
+}
+
+.admin-usuarios-btn-delete:hover {
+    background-color: #c82333;
+}
+
+.admin-usuarios-btn-edit:hover {
+    background-color: #e0a800;
+}
+/* ... y el resto de los estilos de los botones y el estado ... */
+
+/* src/styles/AdminUsuariosPage.css */
+
+/* --- 1. Contenedor de Controles (Alinear texto y botón) --- */
+.admin-usuarios-controls {
+    display: flex;
+    justify-content: space-between; /* Mueve el botón a la derecha */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Fondo ligero para la barra de control */
+    border-radius: 5px;
+}
+
+/* --- 2. Estilo del Botón "Añadir Nuevo Usuario" --- */
+.admin-usuarios-btn-new {
+    background-color: #28a745; /* Color Verde de éxito/acción principal */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none; /* Asegura que no tenga subrayado si es un <Link> o <a> */
+    transition: background-color 0.2s;
+}
+.admin-usuarios-btn-new:hover {
+    background-color: #1e7e34;
+}
+
+/* --- 3. Estilo de la Etiqueta "Usuarios Activos: X" --- */
+.admin-usuarios-status-text {
+    font-weight: 600;
+    color: #343a40;
+    font-size: 1em;
+}
+
+/* Opcional: Para darle un color al número de usuarios activos */
+.admin-usuarios-status-text span {
+    color: #28a745; 
+    margin-left: 5px;
+}

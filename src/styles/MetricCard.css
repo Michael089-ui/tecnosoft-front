@@ -1,0 +1,56 @@
+/* src/styles/MetricCard.css */
+
+.metric-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-card__icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    color: white; /* Color del icono */
+    font-size: 1.5em;
+}
+
+/* Colores de las cards (simulando un color de fondo para el círculo de icono) */
+.metric-card.color-blue .metric-card__icon-container {
+    background-color: #007bff;
+}
+.metric-card.color-green .metric-card__icon-container {
+    background-color: #28a745;
+}
+.metric-card.color-orange .metric-card__icon-container {
+    background-color: #ffc107;
+}
+.metric-card.color-red .metric-card__icon-container {
+    background-color: #dc3545;
+}
+
+.metric-card__title {
+    margin: 0;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.metric-card__value {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #343a40;
+}

@@ -1,0 +1,98 @@
+/* src/styles/LoginPage.css */
+
+/* --- 1. Contenedor de la Página (Ocupa el espacio entre Navbar y Footer) --- */
+.login-page {
+    /* Fondo principal: Gris Oscuro */
+    background-color: #2d3748; /* Un gris oscuro profundo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center;    /* Centrar horizontalmente */
+    padding: 50px 0; /* Espaciado interno */
+    min-height: calc(100vh - 120px); /* Ajusta si el header/footer ocupan más */
+}
+
+/* --- 2. Tarjeta de Login --- */
+.login-card {
+    background-color: #4a5568; /* Gris medio/oscuro para la tarjeta */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 300px;
+}
+
+/* Título */
+.login-title {
+    color: white;
+    font-size: 1.5em;
+    margin: 10px 0 25px 0;
+}
+
+/* Placeholder de Avatar */
+.login-avatar-placeholder {
+    width: 70px;
+    height: 70px;
+    background-color: #63b3ed; /* Azul claro para el avatar */
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+/* --- 3. Elementos del Formulario --- */
+.login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5d6a7d; /* Fondo ligeramente más claro para los inputs */
+    color: white;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.login-input::placeholder {
+    color: #c9d2de;
+}
+
+.login-forgot-password {
+    display: block;
+    color: #a0aec0; /* Gris claro */
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.login-forgot-password:hover {
+    color: #63b3ed;
+}
+
+/* Botón Ingresar */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #63b3ed; /* Color de acción (Azul) */
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-button:hover {
+    background-color: #4299e1;
+}
+
+/* --- 4. Barra Inferior (Opcional) --- */
+.login-bottom-bar {
+    background-color: #1a202c; /* Negro/Gris muy oscuro */
+    color: #a0aec0;
+    font-size: 0.75em;
+    padding: 8px 10px;
+    position: fixed; /* Lo fija abajo del todo */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
